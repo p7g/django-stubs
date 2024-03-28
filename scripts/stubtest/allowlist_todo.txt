@@ -397,7 +397,6 @@ django.contrib.gis.db.models.ObjectDoesNotExist
 django.contrib.gis.db.models.OneToOneField.__get__
 django.contrib.gis.db.models.OneToOneField.formfield
 django.contrib.gis.db.models.OneToOneField.forward_related_accessor_class
-django.contrib.gis.db.models.OneToOneField.related_accessor_class
 django.contrib.gis.db.models.OneToOneRel.__init__
 django.contrib.gis.db.models.OrderBy.as_oracle
 django.contrib.gis.db.models.OrderBy.as_sql
@@ -942,7 +941,6 @@ django.db.models.ObjectDoesNotExist
 django.db.models.OneToOneField.__get__
 django.db.models.OneToOneField.formfield
 django.db.models.OneToOneField.forward_related_accessor_class
-django.db.models.OneToOneField.related_accessor_class
 django.db.models.OneToOneRel.__init__
 django.db.models.OrderBy.as_oracle
 django.db.models.OrderBy.as_sql
@@ -1170,7 +1168,6 @@ django.db.models.fields.related.ManyToOneRel.identity
 django.db.models.fields.related.OneToOneField.__get__
 django.db.models.fields.related.OneToOneField.formfield
 django.db.models.fields.related.OneToOneField.forward_related_accessor_class
-django.db.models.fields.related.OneToOneField.related_accessor_class
 django.db.models.fields.related.OneToOneRel.__init__
 django.db.models.fields.related.RelatedField.formfield
 django.db.models.fields.related.lazy_related_operation

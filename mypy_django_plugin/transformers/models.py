@@ -469,10 +469,20 @@ class AddReverseLookups(ModelClassInitializer):
         related_model_info = self.lookup_class_typeinfo_or_incomplete_defn_error(related_model_cls)
 
         if isinstance(relation, OneToOneRel):
+            related_accessor_class = relation.field.related_accessor_class
+            if helpers.get_class_fullname(related_accessor_class) == fullnames.REVERSE_ONE_TO_ONE_DESCRIPTOR:
+                related_descriptor_info = self.reverse_one_to_one_descriptor
+            else:
+                related_accessor_class_info = helpers.lookup_class_typeinfo(self.api, related_accessor_class)
+                if related_accessor_class_info is not None:
+                    related_descriptor_info = related_accessor_class_info
+                else:
+                    related_descriptor_info = self.reverse_one_to_one_descriptor
+
             self.add_new_node_to_model_class(
                 attname,
                 Instance(
-                    self.reverse_one_to_one_descriptor,
+                    related_descriptor_info,
                     [Instance(self.model_classdef.info, []), Instance(related_model_info, [])],
                 ),
             )

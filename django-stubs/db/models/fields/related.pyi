@@ -185,6 +185,7 @@ class OneToOneField(ForeignKey[_ST, _GT]):
     _pyi_private_set_type: Any | Combinable
     _pyi_private_get_type: Any
 
+    related_accessor_class: type[ReverseOneToOneDescriptor[Any, Any]]
     remote_field: OneToOneRel
     rel_class: type[OneToOneRel]
     def __init__(
